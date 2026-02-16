@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+      
+        Scanner sc = new Scanner(System.in);
+        String S = sc.nextLine();
+        sc.close();
+
+        int letters = 0;
+        int digits = 0;
+        int specialChars = 0;
+
+        for (int i = 0; i < S.length(); i++) {
+            char ch = S.charAt(i);
+
+            if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+                letters++;
+            } else if (ch >= '0' && ch <= '9') {
+                digits++;
+            } else if (ch != ' ') { // excluding spaces
+                specialChars++;
+            }
+        }
+
+        System.out.println(letters);
+        System.out.println(digits);
+        System.out.println(specialChars);
+    }
+}
