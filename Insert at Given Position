@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+      
+        Scanner sc = new Scanner(System.in);
+
+        String S = sc.nextLine();
+        String T = sc.nextLine();
+        int index = sc.nextInt();
+
+        String result = S.substring(0, index) + T + S.substring(index);
+
+        System.out.println(result);
+
+        sc.close();
+    }
+}
